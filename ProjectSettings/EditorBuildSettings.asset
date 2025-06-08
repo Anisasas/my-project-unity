@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Labirintas.unity
     guid: 75d8d3b63a6cf654da017d9b206d6f3e
+  - enabled: 1
+    path: Assets/Scenes/skaiciuotuvas.unity
+    guid: 0e1ac1c6a1ffb0f4a8fcef2ac7be218a
   m_configObjects: {}
