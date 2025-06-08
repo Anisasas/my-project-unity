@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
@@ -8,12 +9,32 @@ public class MenuManager : MonoBehaviour
     public GameObject toolsCanvas;
     public GameObject settingsCanvas;
 
-    void Start()
+void Start()
+{
+    switch (SceneLoadData.menuToShow)
     {
-        ShowMainMenu();
+        case "Credits":
+            ShowCredits();
+            break;
+        case "Games":
+            ShowGames();
+            break;
+        case "Tools":
+            ShowTools();
+            break;
+        case "Settings":
+            ShowSettings();
+            break;
+        default:
+            ShowMainMenu();
+            break;
     }
 
-    void DisableAllCanvases()
+    SceneLoadData.menuToShow = "Main";
+}
+
+
+    public void DisableAllCanvases()
     {
         mainMenuCanvas.SetActive(false);
         creditsCanvas.SetActive(false);
@@ -50,5 +71,10 @@ public class MenuManager : MonoBehaviour
     {
         DisableAllCanvases();
         settingsCanvas.SetActive(true);
+    }
+
+    public void StartLabyrinth()
+    {
+        SceneManager.LoadScene("Labirintas");
     }
 }
