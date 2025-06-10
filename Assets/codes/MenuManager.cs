@@ -9,29 +9,29 @@ public class MenuManager : MonoBehaviour
     public GameObject toolsCanvas;
     public GameObject settingsCanvas;
 
-void Start()
-{
-    switch (SceneLoadData.menuToShow)
+    void Start()
     {
-        case "Credits":
-            ShowCredits();
-            break;
-        case "Games":
-            ShowGames();
-            break;
-        case "Tools":
-            ShowTools();
-            break;
-        case "Settings":
-            ShowSettings();
-            break;
-        default:
-            ShowMainMenu();
-            break;
-    }
+        switch (SceneLoadData.menuToShow)
+        {
+            case "Credits":
+                ShowCredits();
+                break;
+            case "Games":
+                ShowGames();
+                break;
+            case "Tools":
+                ShowTools();
+                break;
+            case "Settings":
+                ShowSettings();
+                break;
+            default:
+                ShowMainMenu();
+                break;
+        }
 
-    SceneLoadData.menuToShow = "Main";
-}
+        SceneLoadData.menuToShow = "Main";
+    }
 
 
     public void DisableAllCanvases()
@@ -76,5 +76,9 @@ void Start()
     public void StartLabyrinth()
     {
         SceneManager.LoadScene("Labirintas");
+    }
+    public void StartSkaiciuotuvas()
+    {
+        SceneManager.LoadScene("skaiciuotuvas");
     }
 }
