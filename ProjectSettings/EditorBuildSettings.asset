@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/skaiciuotuvas.unity
     guid: 0e1ac1c6a1ffb0f4a8fcef2ac7be218a
+  - enabled: 1
+    path: Assets/Scenes/Reacion test.unity
+    guid: 7c04419e8b3345547ad9d1864325deb6
   m_configObjects: {}

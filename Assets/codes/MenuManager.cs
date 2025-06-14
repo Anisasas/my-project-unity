@@ -81,4 +81,10 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("skaiciuotuvas");
     }
+
+    public void StartReacionTest()
+    {
+        SceneManager.LoadScene("Reacion test");
+    }
+
 }
